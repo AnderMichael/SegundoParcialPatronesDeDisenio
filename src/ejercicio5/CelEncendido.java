@@ -9,7 +9,7 @@ public class CelEncendido implements StateCel {
 		String programasCel[] = { "CandyCrush", "Spotify", "ClashRoyale", "ClickUp", "Snapseed", "Weather", "Maps",
 				"Pokedex", "Youtube", "Music" };
 		Random random = new Random();
-		int randomProgram = random.nextInt(10);
+		int randomProgram = random.nextInt(9) + 1;
 		for (int i = 0; i < randomProgram; i++) {
 			System.out.println(String.format("Abriendo programa: %s", programasCel[i]));
 			celular.openProgram(programasCel[i]);

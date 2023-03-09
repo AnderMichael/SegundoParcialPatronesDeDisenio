@@ -39,6 +39,7 @@ public class Celular {
 
 	public void setEstadoActual(StateCel estadoActual) {
 		this.estadoActual = estadoActual;
+		this.estadoActual.changeStateCel(this);
 	}
 
 	public void openProgram(String program) {
@@ -49,10 +50,11 @@ public class Celular {
 		System.out.println("===Celular===");
 		System.out.println(String.format("Ram consume: %.2f", memoryRamConsume));
 		System.out.println(String.format("CPU consume: %.2f", cpuConsume));
-		System.out.println("Programa abierto:");
+		System.out.println("Programas abiertos:");
 		for (String program : programas) {
 			System.out.println("- " + program);
 		}
+		System.out.println("============");
 	}
 
 }
